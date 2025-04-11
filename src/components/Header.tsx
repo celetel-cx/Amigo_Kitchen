@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import Search from "./ui/search";
 import logoImage from "@/assets/logo.jpeg";
 

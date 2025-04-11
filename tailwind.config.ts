@@ -1,8 +1,10 @@
-import type { Config } from "tailwindcss";
-
+/** @type {import('tailwindcss').Config} */
 export default {
   darkMode: ["class"],
-  content: ["./client/index.html", "./client/src/**/*.{js,jsx,ts,tsx}"],
+  content: [
+    "./index.html", // Include root HTML file
+    "./src/**/*.{js,ts,jsx,tsx}", // Include all files in the src folder
+  ],
   theme: {
     extend: {
       borderRadius: {
@@ -41,15 +43,27 @@ export default {
           DEFAULT: "hsl(var(--destructive))",
           foreground: "hsl(var(--destructive-foreground))",
         },
+        success: {
+          DEFAULT: "hsl(var(--green-background))",
+          foreground: "hsl(var(--green-foreground))",
+        },
+        ongoing: {
+          DEFAULT: "hsl(var(--blue-background))",
+          foreground: "hsl(var(--blue-foreground))",
+        },
+        warning: {
+          DEFAULT: "hsl(var(--warning-background))",
+          foreground: "hsl(var(--warning-foreground))",
+        },
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
         chart: {
-          "1": "hsl(var(--chart-1))",
-          "2": "hsl(var(--chart-2))",
-          "3": "hsl(var(--chart-3))",
-          "4": "hsl(var(--chart-4))",
-          "5": "hsl(var(--chart-5))",
+          1: "hsl(var(--chart-1))",
+          2: "hsl(var(--chart-2))",
+          3: "hsl(var(--chart-3))",
+          4: "hsl(var(--chart-4))",
+          5: "hsl(var(--chart-5))",
         },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
@@ -86,5 +100,5 @@ export default {
       },
     },
   },
-  plugins: [require("tailwindcss-animate"), require("@tailwindcss/typography")],
-} satisfies Config;
+  plugins: [require("tailwindcss-animate")],
+};
