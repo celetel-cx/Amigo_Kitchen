@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Search from "./ui/search";
-import logoImage from "@/assets/logo.jpeg";
+import logoImage from "../assets/logo.jpeg";
 
 const Header = () => {
   const [isMobileSearchVisible, setIsMobileSearchVisible] = useState(false);

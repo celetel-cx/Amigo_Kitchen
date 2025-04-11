@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { cn, scrollToElement } from "@/lib/utils";
 
 interface Category {
@@ -26,15 +26,16 @@ const CategoryTabs: React.FC<CategoryTabsProps> = ({ categories }) => {
   useEffect(() => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
-      
+
       // Find the section that is currently in view
       for (let i = categories.length - 1; i >= 0; i--) {
         const category = categories[i];
         const element = document.getElementById(category.id);
-        
+
         if (element) {
           const rect = element.getBoundingClientRect();
-          if (rect.top <= 200) { // Adjust this value based on your header height
+          if (rect.top <= 200) {
+            // Adjust this value based on your header height
             setActiveCategory(category.id);
             break;
           }
@@ -49,12 +50,12 @@ const CategoryTabs: React.FC<CategoryTabsProps> = ({ categories }) => {
   return (
     <div className="bg-white sticky top-16 z-20 shadow-sm">
       <div className="container mx-auto">
-        <div 
+        <div
           ref={tabsRef}
           className="category-tabs flex overflow-x-auto py-4 px-4 gap-3 no-scrollbar"
           style={{
-            scrollbarWidth: 'none',
-            msOverflowStyle: 'none'
+            scrollbarWidth: "none",
+            msOverflowStyle: "none",
           }}
         >
           <button
@@ -68,7 +69,7 @@ const CategoryTabs: React.FC<CategoryTabsProps> = ({ categories }) => {
           >
             All
           </button>
-          
+
           {categories.map((category) => (
             <button
               key={category.id}

@@ -1,4 +1,5 @@
 import { FeaturedItem } from "@/components/FeaturedItems";
+import React from "react";
 
 export interface MenuItem {
   name: string;
@@ -14,7 +15,7 @@ export const categories = [
   { id: "main-course", name: "Main Course" },
   { id: "biryani", name: "Biryani" },
   { id: "bread", name: "Bread" },
-  { id: "beverages", name: "Beverages" }
+  { id: "beverages", name: "Beverages" },
 ];
 
 export const featuredItems: FeaturedItem[] = [
@@ -24,7 +25,7 @@ export const featuredItems: FeaturedItem[] = [
     price: 800,
     description: "Chef's special whole chicken preparation with royal spices",
     isVeg: false,
-    image: "https://images.pexels.com/photos/2313686/pexels-photo-2313686.jpeg"
+    image: "https://images.pexels.com/photos/2313686/pexels-photo-2313686.jpeg",
   },
   {
     id: "paneer-rajwada",
@@ -32,7 +33,7 @@ export const featuredItems: FeaturedItem[] = [
     price: 360,
     description: "Premium paneer in rich royal gravy",
     isVeg: true,
-    image: "https://images.pexels.com/photos/7625056/pexels-photo-7625056.jpeg"
+    image: "https://images.pexels.com/photos/7625056/pexels-photo-7625056.jpeg",
   },
   {
     id: "dal-khureshi",
@@ -40,8 +41,8 @@ export const featuredItems: FeaturedItem[] = [
     price: 240,
     description: "Special lentil preparation with herbs and spices",
     isVeg: true,
-    image: "https://images.pexels.com/photos/674574/pexels-photo-674574.jpeg"
-  }
+    image: "https://images.pexels.com/photos/674574/pexels-photo-674574.jpeg",
+  },
 ];
 
 // Build menu items by category for easy reference
@@ -60,7 +61,7 @@ export const menuItems: Record<string, MenuItem[]> = {
     { name: "Lemon Chicken", price: 300, isVeg: false },
     { name: "Tai Pai Chicken", price: 300, isVeg: false },
     { name: "Dragon Chicken", price: 310, isVeg: false },
-    { name: "Chicken Chilli/Manchurian/65", price: 320, isVeg: false }
+    { name: "Chicken Chilli/Manchurian/65", price: 320, isVeg: false },
   ],
   soups: [
     { name: "Veg Manchow Soup", price: 160, isVeg: true },
@@ -72,7 +73,7 @@ export const menuItems: Record<string, MenuItem[]> = {
     { name: "Chicken Manchow Soup", price: 190, isVeg: false },
     { name: "Chicken Hot & Sour Soup", price: 190, isVeg: false },
     { name: "Chicken Hot Pot Soup", price: 219, isVeg: false },
-    { name: "Chicken Burnt Garlic Soup", price: 230, isVeg: false }
+    { name: "Chicken Burnt Garlic Soup", price: 230, isVeg: false },
   ],
   tandoor: [
     { name: "Veg Seekh Kebab", price: 330, isVeg: true },
@@ -89,7 +90,7 @@ export const menuItems: Record<string, MenuItem[]> = {
     { name: "Murgh Malai Tikka", price: 350, isVeg: false },
     { name: "Murgh Alishan Tikka", price: 350, isVeg: false },
     { name: "Tandoori Chicken (Half)", price: 360, isVeg: false },
-    { name: "Tandoori Chicken (Full)", price: 630, isVeg: false }
+    { name: "Tandoori Chicken (Full)", price: 630, isVeg: false },
   ],
   "fish-prawns": [
     { name: "Fish Tikka", price: 330, isVeg: false },
@@ -103,7 +104,7 @@ export const menuItems: Record<string, MenuItem[]> = {
     { name: "Tandoori Prawns", price: 480, isVeg: false },
     { name: "Tawa Prawns", price: 480, isVeg: false },
     { name: "Golden Fried Prawns", price: 480, isVeg: false },
-    { name: "Prawns Chilli", price: 480, isVeg: false }
+    { name: "Prawns Chilli", price: 480, isVeg: false },
   ],
   "main-course-veg": [
     { name: "Dal Tadka", price: 180, isVeg: true },
@@ -127,7 +128,7 @@ export const menuItems: Record<string, MenuItem[]> = {
     { name: "Mutter Paneer", price: 330, isVeg: true },
     { name: "Paneer Butter Masala/Lababdar", price: 340, isVeg: true },
     { name: "Diwani Nizami Handi", price: 260, isVeg: true },
-    { name: "Chef's Spacial Paneer Rajwada", price: 360, isVeg: true }
+    { name: "Chef's Spacial Paneer Rajwada", price: 360, isVeg: true },
   ],
   "main-course-non-veg": [
     { name: "Egg Curry/Masala/Kolhapuri", price: 240, isVeg: false },
@@ -148,7 +149,7 @@ export const menuItems: Record<string, MenuItem[]> = {
     { name: "Chicken Tangdi Masala/Kalmi Masala", price: 390, isVeg: false },
     { name: "Chicken Rajwada", price: 390, isVeg: false },
     { name: "Murgh Mussallam", price: 800, isVeg: false },
-    { name: "Murgh Maharaja", price: 800, isVeg: false }
+    { name: "Murgh Maharaja", price: 800, isVeg: false },
   ],
   "mutton-fish": [
     { name: "Mutton Masala/Curry", price: 390, isVeg: false },
@@ -163,7 +164,7 @@ export const menuItems: Record<string, MenuItem[]> = {
     { name: "Fish Bengali Curry (B/L)", price: 330, isVeg: false },
     { name: "Prawns Curry", price: 460, isVeg: false },
     { name: "Prawns Masala", price: 460, isVeg: false },
-    { name: "Prawns Kassa", price: 430, isVeg: false }
+    { name: "Prawns Kassa", price: 430, isVeg: false },
   ],
   biryani: [
     { name: "Veg Biryani", price: 230, isVeg: true },
@@ -175,7 +176,7 @@ export const menuItems: Record<string, MenuItem[]> = {
     { name: "Chicken Tikka Biryani", price: 320, isVeg: false },
     { name: "Mutton Biryani", price: 320, isVeg: false },
     { name: "Mutton Kheema Biryani", price: 320, isVeg: false },
-    { name: "Prawns Biryani", price: 340, isVeg: false }
+    { name: "Prawns Biryani", price: 340, isVeg: false },
   ],
   bread: [
     { name: "Roti", price: 40, isVeg: true },
@@ -189,7 +190,7 @@ export const menuItems: Record<string, MenuItem[]> = {
     { name: "Tandoori Roti", price: 35, isVeg: true },
     { name: "Butter Tandoori Roti", price: 40, isVeg: true },
     { name: "Lachha Paratha", price: 45, isVeg: true },
-    { name: "Butter Lachha Paratha", price: 65, isVeg: true }
+    { name: "Butter Lachha Paratha", price: 65, isVeg: true },
   ],
   beverages: [
     { name: "Water", price: 20, isVeg: true },
@@ -197,8 +198,8 @@ export const menuItems: Record<string, MenuItem[]> = {
     { name: "Butter Milk", price: 80, isVeg: true },
     { name: "Fresh Lime Juice", price: 90, isVeg: true },
     { name: "Cold Coffee", price: 120, isVeg: true },
-    { name: "Virgin Mojito", price: 140, isVeg: true }
-  ]
+    { name: "Virgin Mojito", price: 140, isVeg: true },
+  ],
 };
 
 export const menuCategories = [
@@ -209,17 +210,17 @@ export const menuCategories = [
     subcategories: [
       {
         title: "Vegetarian",
-        items: menuItems.starters.filter(item => item.isVeg)
+        items: menuItems.starters.filter((item) => item.isVeg),
       },
       {
         title: "Non-Vegetarian",
-        items: menuItems.starters.filter(item => !item.isVeg)
+        items: menuItems.starters.filter((item) => !item.isVeg),
       },
       {
         title: "Soups",
-        items: menuItems.soups
-      }
-    ]
+        items: menuItems.soups,
+      },
+    ],
   },
   {
     id: "tandoor",
@@ -228,17 +229,17 @@ export const menuCategories = [
     subcategories: [
       {
         title: "Tandoor Vegetarian",
-        items: menuItems.tandoor.filter(item => item.isVeg)
+        items: menuItems.tandoor.filter((item) => item.isVeg),
       },
       {
         title: "Tandoor Non-Vegetarian",
-        items: menuItems.tandoor.filter(item => !item.isVeg)
+        items: menuItems.tandoor.filter((item) => !item.isVeg),
       },
       {
         title: "Fish & Prawns",
-        items: menuItems["fish-prawns"]
-      }
-    ]
+        items: menuItems["fish-prawns"],
+      },
+    ],
   },
   {
     id: "main-course",
@@ -247,17 +248,17 @@ export const menuCategories = [
     subcategories: [
       {
         title: "Vegetarian",
-        items: menuItems["main-course-veg"]
+        items: menuItems["main-course-veg"],
       },
       {
         title: "Non-Vegetarian",
-        items: menuItems["main-course-non-veg"]
+        items: menuItems["main-course-non-veg"],
       },
       {
         title: "Mutton & Fish",
-        items: menuItems["mutton-fish"]
-      }
-    ]
+        items: menuItems["mutton-fish"],
+      },
+    ],
   },
   {
     id: "biryani",
@@ -266,13 +267,13 @@ export const menuCategories = [
     subcategories: [
       {
         title: "Vegetarian Biryani",
-        items: menuItems.biryani.filter(item => item.isVeg)
+        items: menuItems.biryani.filter((item) => item.isVeg),
       },
       {
         title: "Non-Vegetarian Biryani",
-        items: menuItems.biryani.filter(item => !item.isVeg)
-      }
-    ]
+        items: menuItems.biryani.filter((item) => !item.isVeg),
+      },
+    ],
   },
   {
     id: "bread",
@@ -281,9 +282,9 @@ export const menuCategories = [
     subcategories: [
       {
         title: "Breads",
-        items: menuItems.bread
-      }
-    ]
+        items: menuItems.bread,
+      },
+    ],
   },
   {
     id: "beverages",
@@ -292,8 +293,8 @@ export const menuCategories = [
     subcategories: [
       {
         title: "Beverages",
-        items: menuItems.beverages
-      }
-    ]
-  }
+        items: menuItems.beverages,
+      },
+    ],
+  },
 ];

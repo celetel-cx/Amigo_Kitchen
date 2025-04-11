@@ -15,8 +15,16 @@
     "moduleResolution": "Node", // Use Node.js module resolution
     "resolveJsonModule": true, // Allow importing JSON files
     "isolatedModules": true, // Ensure TypeScript files are treated as modules
-    "noEmit": true // Prevent emitting output files
+    "noEmit": true, // Prevent emitting output files
+    "typeRoots": ["node_modules/@types", "src/types"]
   },
-  "include": ["src"], // Include the source directory
+  "include": [
+    "src",
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "src/**/*.jpeg",
+    "src/**/*.jpg",
+    "src/**/*.png"
+  ],
   "exclude": ["node_modules", "dist"] // Exclude unnecessary directories
 }
